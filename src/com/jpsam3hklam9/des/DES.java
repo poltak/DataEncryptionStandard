@@ -50,8 +50,8 @@ public class DES
         33, 1, 41, 9, 49, 17, 57, 25
     };
 
-    private RoundKeyGenerator keygen;
-    private FeistelFunction feistel;
+    private final RoundKeyGenerator keygen;
+    private final FeistelFunction feistel;
 
     public DES()
     {
@@ -192,9 +192,8 @@ public class DES
         long output = 0;
         int index;
 
-        for (int i = 0; i < indexTable.length; i++)
-        {
-            index = inputLength - indexTable[i];
+        for (byte anIndexTable : indexTable) {
+            index = inputLength - anIndexTable;
             output = (output << 1) | ((input >> index) & 1);
         }
 

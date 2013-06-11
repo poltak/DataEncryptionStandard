@@ -1,9 +1,8 @@
 package com.jpsam3hklam9.des;
 
-public class FeistelFunction
+class FeistelFunction
 {
-
-    /*
+    /**
      * Values for the Expansion Permutation (E) step.
      */
     private static final byte[] E =
@@ -18,7 +17,7 @@ public class FeistelFunction
         28, 29, 30, 31, 32, 1
     };
 
-    /*
+    /**
      * Values for the 8 Substitution (S) box tables.
      */
     private final static byte[][][] S_BOX =
@@ -71,7 +70,7 @@ public class FeistelFunction
 		{ 2, 1, 14, 7, 4, 10, 8, 13, 15, 12, 9, 0, 3, 5, 6, 11}
     }};
 
-    /*
+    /**
      * Values for the Permutation (P)-Box table.
      */
     private final static byte[] P_BOX =
@@ -137,7 +136,7 @@ public class FeistelFunction
      *
      * @return The 32 bit output of the P-Box permutation step.
      */
-    protected int F(int input, long roundKey)
+    int F(int input, long roundKey)
     {
         long output = expansionPermutation(input);
         output ^= roundKey;

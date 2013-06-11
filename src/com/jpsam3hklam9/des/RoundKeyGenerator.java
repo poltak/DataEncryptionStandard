@@ -1,8 +1,8 @@
 package com.jpsam3hklam9.des;
 
-public class RoundKeyGenerator
+class RoundKeyGenerator
 {
-    /*
+    /**
      * Values for the Permutation Choice 1 table for the initial permutation of the 56-bit key.
      */
     private final static byte[] PC1 =
@@ -17,7 +17,7 @@ public class RoundKeyGenerator
         21, 13, 5,  28, 20, 12, 4
     };
 
-    /*
+    /**
      * Values for the Permutation Choice 2 table for the contracting permutation step of the key
      * halves.
      */
@@ -33,7 +33,7 @@ public class RoundKeyGenerator
         46, 42, 50, 36, 29, 32
     };
 
-    /*
+    /**
      * Values for the number of left circular shifts to use on the key halves.
      */
     private final static byte[] CIRCULAR_SHIFTS =
@@ -77,7 +77,7 @@ public class RoundKeyGenerator
      * Generates all the round keys from 64 bit specified key @param input.
      * @return An array of 16 longs representing all the 48 bit round keys.
      */
-    protected long[] generateRoundKeys(long input)
+    long[] generateRoundKeys(long input)
     {
     	input = permutationChoice1(input);
     	int halfA = (int) (input >> 28);			// gets 28 MSBs
