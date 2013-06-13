@@ -2,13 +2,14 @@ DataEncryptionStandard
 ======================
 
 _Co-authored by Hoi Kit Goodwin Lam._<br />
-A complete JavaSE 7 implementation of the Data Encryption Standard as specified in FIPS 46-3.<br />
+A complete JavaSE 7 implementation of the Data Encryption Standard as documented in FIPS 46-3.<br />
 (see http://csrc.nist.gov/publications/fips/fips46-3/fips46-3.pdf)
 
 ###DES Class
 Main DES class, handling the overall logic of the standard. Allows standard DES encryption and
 decryption options while also supporting cipher-block chaining mode encryption and decryption.<br />
-(see https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#Cipher-block_chaining_.28CBC.29)
+(see https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#Cipher-block_chaining_.28CBC.29<br />
+and http://www.itl.nist.gov/fipspubs/fip81.htm)
 
 ###FeistelFunction Class
 Handles the main logic involving the F-Function, including expansion, key mixing, substitutions
